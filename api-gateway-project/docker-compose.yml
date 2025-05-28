@@ -1,0 +1,26 @@
+
+services:
+  api:
+    build: .
+    container_name: api
+    expose:
+      - "3000"
+    networks:
+      - webnet
+
+  nginx:
+    image: nginx:1.27.5
+    container_name: nginx
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - api
+    networks:
+      - webnet
+
+networks:
+  webnet:
+

@@ -81,7 +81,7 @@ docker compose down
 * For production, use valid SSL certificates (e.g., from Let's Encrypt) and adjust security settings accordingly.
 
 
-## 🧑‍💻 Author
+## 🙅🏽‍♀️ Author
 
 Created by \DaCoda BlakHeart — built for simplicity, stability, and sanity.
 
